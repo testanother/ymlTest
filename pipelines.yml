@@ -4,7 +4,7 @@ resources:
     type: RemoteFile
     configuration:
       source: git_chaitanya
-      fileLocation: 'https://github.com/ChaitanyaVootla/ymlTest/edit/master/pipelines.yml'
+      fileLocation: 'https://github.com/ChaitanyaVootla/ymlTest/edit/master/pipelines2.yml'
       fileName: 'pipelines.yml'
       fileDateTime: 'dttm'
   - name: KubeCluster2
