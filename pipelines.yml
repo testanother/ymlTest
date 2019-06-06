@@ -18,3 +18,6 @@ pipelines:
         execution:
           onExecute:
             - echo "executing..."
+        triggeredBy:
+          resources:
+            - RemoteFile
