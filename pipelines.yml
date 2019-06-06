@@ -4,6 +4,9 @@ resources:
     type: RemoteFile
     configuration:
       source: git_chaitanya
+      fileLocation: 'https://github.com/ChaitanyaVootla/ymlTest/edit/master/pipelines.yml'
+      fileName: 'pipelines.yml'
+      fileDateTime: 'dttm'
 pipelines:
   - name: img_test_pipeline
     setup:
