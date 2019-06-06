@@ -2,12 +2,8 @@
 resources:
   - name: RemoteFile
     type: RemoteFile
-    fileLocation: https://raw.githubusercontent.com/ChaitanyaVootla/ymlTest/master/pipelines.yml
-    fileName: pipelines.yml
     configuration:
       integrationName: git_chaitanya
-    version:
-      fileDtTm: random_value
 pipelines:
   - name: img_test_pipeline
     setup:
