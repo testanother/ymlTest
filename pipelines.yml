@@ -11,7 +11,7 @@ resources:
   - name: KubeCluster
     type: KubeCluster
     configuration:
-      integrationName: docker_chaitanya
+      kubernetesConfig: docker_chaitanya
       bastionHostIP: 1.2.3.4
       bastionUser: sshUser
       bastionIntegrationName: sshKeyIntegration
