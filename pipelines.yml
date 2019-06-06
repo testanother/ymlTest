@@ -7,6 +7,14 @@ resources:
       fileLocation: 'https://github.com/ChaitanyaVootla/ymlTest/edit/master/pipelines.yml'
       fileName: 'pipelines.yml'
       fileDateTime: 'dttm'
+
+  - name: KubeCluster
+    type: KubeCluster
+    configuration:
+      integrationName: docker_chaitanya
+      bastionHostIP: 1.2.3.4
+      bastionUser: sshUser
+      bastionIntegrationName: sshKeyIntegration
 pipelines:
   - name: img_test_pipeline
     setup:
