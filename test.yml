@@ -1,0 +1,15 @@
+pipelines:
+  - name: img_test_pipeline
+    setup:
+      runtime: onHost
+    steps:
+      - name: bash
+        type: bash
+        configuration:
+          affinityGroup: test_group
+        requires:
+          integrations:
+            - docker_chaitanya
+        execution:
+          onExecute:
+            - echo "executing..."
