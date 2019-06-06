@@ -3,7 +3,7 @@ resources:
   - name: RemoteFile
     type: RemoteFile
     configuration:
-      integrationName: git_chaitanya
+      source: git_chaitanya
 pipelines:
   - name: img_test_pipeline
     setup:
