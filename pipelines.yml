@@ -1,6 +1,5 @@
     
 resources:
-
   - name: KubeCluster
     type: KubeCluster
     configuration:
@@ -20,5 +19,4 @@ pipelines:
             - echo "executing..."
         triggeredBy:
           resources:
-            - RemoteFile
             - KubeCluster
