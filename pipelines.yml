@@ -5,7 +5,7 @@ resources:
     configuration:
       source: git_chaitanya
       fileLocation: 'https://github.com/ChaitanyaVootla/ymlTest/edit/master/pipelines.yml'
-      fileName: 'pipelines.yml'
+      fileName: 'pipelines2.yml'
       fileDateTime: 'dttm'
 pipelines:
   - name: img_test_pipeline
