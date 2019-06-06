@@ -1,5 +1,12 @@
     
 resources:
+  - name: RemoteFile
+    type: RemoteFile
+    configuration:
+      source: git_chaitanya
+      fileLocation: 'https://github.com/ChaitanyaVootla/ymlTest/edit/master/pipelines.yml'
+      fileName: 'pipelines.yml'
+      fileDateTime: 'dttm'
   - name: KubeCluster
     type: KubeCluster
     configuration:
@@ -20,3 +27,4 @@ pipelines:
         triggeredBy:
           resources:
             - KubeCluster
+            - RemoteFile
