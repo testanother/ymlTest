@@ -5,8 +5,6 @@ pipelines:
     steps:
       - name: bash
         type: bash
-        configuration:
-          affinityGroup: test_group
         execution:
           onExecute:
             - echo "executing..."
