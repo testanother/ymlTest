@@ -28,3 +28,4 @@ pipelines:
         triggeredBy:
           resources:
             - RemoteFile
+            - KubeCluster
