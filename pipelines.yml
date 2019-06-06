@@ -7,7 +7,7 @@ resources:
       fileLocation: 'https://github.com/ChaitanyaVootla/ymlTest/edit/master/pipelines.yml'
       fileName: 'pipelines.yml'
       fileDateTime: 'dttm'
-  - name: KubeCluster
+  - name: KubeCluster2
     type: KubeCluster
     configuration:
       kubernetesConfig: docker_chaitanya
@@ -26,5 +26,5 @@ pipelines:
             - echo "executing..."
         triggeredBy:
           resources:
-            - KubeCluster
+            - KubeCluster2
             - RemoteFile
