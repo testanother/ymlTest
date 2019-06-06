@@ -7,9 +7,6 @@ pipelines:
         type: bash
         configuration:
           affinityGroup: test_group
-        requires:
-          integrations:
-            - docker_chaitanya
         execution:
           onExecute:
             - echo "executing..."
