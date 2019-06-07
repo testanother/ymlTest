@@ -54,9 +54,6 @@ pipelines:
           sign: false
           storeAtSourceArtifactory: 'test'
           description: 'test'
-          releaseNotes:
-            content: 'test'
-            syntax: '123123'
           inputResources:
             - name: KubeCluster
 #           inputSteps:
