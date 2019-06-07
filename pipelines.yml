@@ -57,8 +57,8 @@ pipelines:
           releaseNotes:
             content: 'test'
             syntax: plain_text
-#           inputResources:
-#             - name: KubeCluster
+          inputResources:
+            - name: KubeCluster
 #           inputSteps:
 #             - name: bash
           outputResources:
