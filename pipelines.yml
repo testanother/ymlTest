@@ -44,7 +44,7 @@ pipelines:
           resources:
             - KubeCluster
             - RemoteFile
-            - FileSpec    steps:
+            - FileSpec
       - name: CreateReleaseBundle
         type: CreateReleaseBundle
         configuration:
