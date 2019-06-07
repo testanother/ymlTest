@@ -69,6 +69,6 @@ pipelines:
 #           inputSteps:
 #             - name: bash
           integrations:
-            - name: git_chaitanya
+            - name: artifactoryIntegration
           outputResources:
             - name: RemoteFile
