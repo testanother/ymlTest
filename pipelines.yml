@@ -62,4 +62,4 @@ pipelines:
 #           inputSteps:
 #             - name: bash
           outputResources:
-            - name: RemoteFile
+            - RemoteFile
