@@ -56,7 +56,7 @@ pipelines:
           description: 'test'
           releaseNotes:
             content: 'test'
-            syntax: "#### h4 Heading"
+            syntax: h4 Heading
           inputResources:
             - name: KubeCluster
 #           inputSteps:
