@@ -48,7 +48,7 @@ pipelines:
           buildName: 'test'
           buildNumber: 'test'
           integrations:
-            - name: artifactoryIntegration
+            - name: git_chaitanya
           inputResources:
             - name: BuildInfo
               trigger: false 
