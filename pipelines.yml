@@ -15,23 +15,23 @@ resources:
       bastionUser: sshUser
       bastionIntegrationName: sshKeyIntegration
   - name: fileSpecResource
-     type: FileSpec
-     configuration:      
-       sourceArtifactory: docker_chaitanya
-       pattern: 'test'
-       aql: 'test'
-       target: 'test'
-       props: 'test'
-       recursive: false
-       flat: false
-       excludePatterns: 'test'
-       archiveEntries: 'test'
-       buildName: 'test'
-       buildNumber: 1
-       sortBy: 'test'
-       sortOrder: 'test'
-       limit: 1
-       offset: 1
+    type: FileSpec
+    configuration:      
+      sourceArtifactory: docker_chaitanya
+      pattern: 'test'
+      aql: 'test'
+      target: 'test'
+      props: 'test'
+      recursive: false
+      flat: false
+      excludePatterns: 'test'
+      archiveEntries: 'test'
+      buildName: 'test'
+      buildNumber: 1
+      sortBy: 'test'
+      sortOrder: 'test'
+      limit: 1
+      offset: 1
 pipelines:
   - name: img_test_pipeline
     setup:
