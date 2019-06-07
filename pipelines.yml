@@ -56,7 +56,7 @@ pipelines:
           description: 'test'
           releaseNotes:
             content: 'test'
-            syntax: '123123'
+            syntax: plain_text
           inputResources:
             - name: KubeCluster
 #           inputSteps:
