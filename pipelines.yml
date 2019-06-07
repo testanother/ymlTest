@@ -44,4 +44,22 @@ pipelines:
           resources:
             - KubeCluster
             - RemoteFile
-            - FileSpec
+            - FileSpec    steps:
+      - name: CreateReleaseBundle
+        type: CreateReleaseBundle
+        configuration:
+          releaseBundleName: 'test'
+          releaseBundleVersion: 'test'
+          dryRun: false
+          sign: false
+          storeAtSourceArtifactory: 'test'
+          description: 'test'
+          releaseNotes:
+            content: 'test'
+            syntax: 'test'
+          inputResources:
+            - name: KubeCluster
+          inputSteps:
+            - name: bash
+          outputResources:
+            - name: RemoteFile
