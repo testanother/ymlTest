@@ -7,14 +7,14 @@ resources:
       fileLocation: 'https://github.com/ChaitanyaVootla/ymlTest/edit/master/pipelines.yml'
       fileName: 'pipelines.yml'
       fileDateTime: 'dttm'
-  - name: KubeCluster2
+  - name: KubeCluster
     type: KubeCluster
     configuration:
       kubernetesConfig: docker_chaitanya
       bastionHostIP: 1.2.3.4
       bastionUser: sshUser
       bastionIntegrationName: sshKeyIntegration
-  - name: fileSpecResource
+  - name: FileSpec
     type: FileSpec
     configuration:      
       sourceArtifactory: docker_chaitanya
@@ -44,5 +44,6 @@ pipelines:
             - echo "executing..."
         triggeredBy:
           resources:
-            - KubeCluster2
+            - KubeCluster
             - RemoteFile
+            - FileSpec
