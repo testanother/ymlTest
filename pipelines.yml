@@ -47,8 +47,8 @@ pipelines:
           waitUntilFinish: false
           buildName: 'test'
           buildNumber: 'test'
-#           integrations:
-#             - name: artifactoryIntegration
+          integrations:
+            - name: artifactoryIntegration
           inputResources:
             - name: BuildInfo
               trigger: false 
