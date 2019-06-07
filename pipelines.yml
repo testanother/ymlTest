@@ -26,8 +26,6 @@ resources:
       flat: false
       excludePatterns: 'test'
       archiveEntries: 'test'
-      buildName: 'test'
-      buildNumber: 1
       sortBy: 'test'
       sortOrder: 'test'
       limit: 1
