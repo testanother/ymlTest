@@ -61,5 +61,7 @@ pipelines:
             - name: KubeCluster
 #           inputSteps:
 #             - name: bash
+          integrations
+            - name: git_chaitanya
           outputResources:
             - name: RemoteFile
