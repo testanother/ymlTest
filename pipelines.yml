@@ -35,16 +35,16 @@ pipelines:
     setup:
       runtime: onHost
     steps:
-      - name: bash
-        type: bash
-        execution:
-          onExecute:
-            - echo "executing..."
-        triggeredBy:
-          resources:
-            - KubeCluster
-            - RemoteFile
-            - FileSpec
+#       - name: bash
+#         type: bash
+#         execution:
+#           onExecute:
+#             - echo "executing..."
+#         triggeredBy:
+#           resources:
+#             - KubeCluster
+#             - RemoteFile
+#             - FileSpec
       - name: CreateReleaseBundle
         type: CreateReleaseBundle
         configuration:
@@ -59,7 +59,7 @@ pipelines:
             syntax: 'test'
           inputResources:
             - name: KubeCluster
-          inputSteps:
-            - name: bash
+#           inputSteps:
+#             - name: bash
           outputResources:
             - name: RemoteFile
