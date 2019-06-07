@@ -41,6 +41,17 @@ pipelines:
     setup:
       runtime: onHost
     steps:
+      - name: XrayScan
+        type: XrayScan
+        configuration:
+          waitUntilFinish: false
+          buildName: 'test'
+          buildNumber: 'test'
+          integrations:
+            - name: artifactoryIntegration
+          inputResources:
+            - name: BuildInfo
+              trigger: false 
 #       - name: bash
 #         type: bash
 #         execution:
@@ -51,24 +62,24 @@ pipelines:
 #             - KubeCluster
 #             - RemoteFile
 #             - FileSpec
-      - name: CreateReleaseBundle
-        type: CreateReleaseBundle
-        configuration:
-          releaseBundleName: 'test'
-          releaseBundleVersion: 'test'
-          dryRun: false
-          sign: false
-          storeAtSourceArtifactory: 'test'
-          description: 'test'
-          releaseNotes:
-            content: 'test'
-            syntax: plain_text
-          inputResources:
-            - name: KubeCluster
-            - name: BuildInfo
+#       - name: CreateReleaseBundle
+#         type: CreateReleaseBundle
+#         configuration:
+#           releaseBundleName: 'test'
+#           releaseBundleVersion: 'test'
+#           dryRun: false
+#           sign: false
+#           storeAtSourceArtifactory: 'test'
+#           description: 'test'
+#           releaseNotes:
+#             content: 'test'
+#             syntax: plain_text
+#           inputResources:
+#             - name: KubeCluster
+#             - name: BuildInfo
 #           inputSteps:
 #             - name: bash
-          integrations:
-            - name: artifactoryIntegration
-          outputResources:
-            - name: RemoteFile
+#           integrations:
+#             - name: artifactoryIntegration
+#           outputResources:
+#             - name: RemoteFile
