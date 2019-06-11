@@ -41,17 +41,10 @@ pipelines:
     setup:
       runtime: onHost
     steps:
-      - name: XrayScan
-        type: XrayScan
+      - name: Bash_1
+        type: Bash
         configuration:
-          waitUntilFinish: false
-          buildName: 'test'
-          buildNumber: 'test'
-          integrations:
-            - name: artifactoryIntegration
-          inputResources:
-            - name: BuildInfo
-              trigger: false 
+          priority: 0
 #       - name: bash
 #         type: bash
 #         execution:
