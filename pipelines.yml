@@ -68,7 +68,7 @@ pipelines:
         execution:
           onExecute:
             - echo "done"
-      - name: Bash_2
+      - name: Bash_3
         type: Bash
         configuration:
           priority: 0
