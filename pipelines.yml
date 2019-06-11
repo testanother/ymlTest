@@ -45,6 +45,9 @@ pipelines:
         type: Bash
         configuration:
           priority: 0
+        execution:
+          onExecute:
+            - echo "executing task command 1"
 #       - name: bash
 #         type: bash
 #         execution:
