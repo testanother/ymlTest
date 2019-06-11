@@ -34,6 +34,7 @@ resources:
     type: Aql
     configuration:
       sourceArtifactory: artifactoryIntegration
+      query: 'asd'
   - name: BuildInfo 
     type: BuildInfo
     configuration:
