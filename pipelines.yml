@@ -52,9 +52,9 @@ pipelines:
         type: Bash
         configuration:
           priority: 0
-          inputResources:
+          outputResources:
             - name: DockerTagTest
-            - name: KubeCluster
+            - name: FileSpec
         execution:
           onExecute:
             - write_output DockerTagTest "imageTag="$step_id
@@ -67,7 +67,7 @@ pipelines:
             - name: FileSpec
         execution:
           onExecute:
-            - write_output DockerTagTest "imageTag="$step_id
+            - echo "done"
 #       - name: bash
 #         type: bash
 #         execution:
