@@ -68,6 +68,18 @@ pipelines:
         execution:
           onExecute:
             - echo "done"
+      - name: Bash_2
+        type: Bash
+        configuration:
+          priority: 0
+          inputSteps:
+            - name: Bash_2
+          inputResources:
+            - name: FileSpec
+            - name: RemoteFile
+        execution:
+          onExecute:
+            - echo "done"
 #       - name: bash
 #         type: bash
 #         execution:
