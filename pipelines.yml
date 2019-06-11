@@ -36,6 +36,13 @@ resources:
       sourceArtifactory: artifactoryIntegration
       buildName: myBuild
       buildNumber: 123
+  - name: DockerTagTest
+    type: Image
+    configuration:
+      registry: artDocker
+      imageName: demo/app
+      imageTag: latest
+      autoPull: false
 pipelines:
   - name: img_test_pipeline
     setup:
@@ -45,9 +52,11 @@ pipelines:
         type: Bash
         configuration:
           priority: 0
+          outputResources:
+            - name: DockerTagTest
         execution:
           onExecute:
-            - echo "executing task command 1"
+            - write_output DockerTagTest "imageTag="$step_id
 #       - name: bash
 #         type: bash
 #         execution:
