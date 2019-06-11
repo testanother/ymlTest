@@ -54,6 +54,7 @@ pipelines:
           priority: 0
           inputResources:
             - name: DockerTagTest
+            - name: KubeCluster
         execution:
           onExecute:
             - write_output DockerTagTest "imageTag="$step_id
@@ -63,6 +64,7 @@ pipelines:
           priority: 0
           inputResources:
             - name: DockerTagTest
+            - name: FileSpec
         execution:
           onExecute:
             - write_output DockerTagTest "imageTag="$step_id
