@@ -7,13 +7,6 @@ resources:
       fileLocation: 'https://github.com/ChaitanyaVootla/ymlTest/edit/master/pipelines.yml'
       fileName: 'pipelines.yml'
       fileDateTime: 'dttm'
-  - name: KubeCluster
-    type: KubeCluster
-    configuration:
-      kubernetesConfig: docker_chaitanya
-      bastionHostIP: 1.2.3.4
-      bastionUser: sshUser
-      bastionIntegrationName: sshKeyIntegration
   - name: FileSpec
     type: FileSpec
     configuration:      
@@ -59,7 +52,6 @@ pipelines:
           priority: 0
           outputResources:
             - name: DockerTagTest
-            - name: KubeCluster
         execution:
           onExecute:
             - write_output DockerTagTest "imageTag="$step_id
@@ -69,7 +61,6 @@ pipelines:
           priority: 0
           inputResources:
             - name: DockerTagTest
-            - name: KubeCluster
             - name: Aql
         execution:
           onExecute:
