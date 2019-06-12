@@ -74,6 +74,9 @@ pipelines:
           inputResources:
             - name: FileSpec
             - name: RemoteFile
+          integrations:
+            - name: artifactoryIntegration
+            - name: git_chaitanya
         execution:
           onExecute:
             - echo "done"
