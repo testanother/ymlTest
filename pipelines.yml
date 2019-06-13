@@ -47,7 +47,6 @@ pipelines:
       runtime: onHost
     steps:
       - name: Bash_1
-        affinityGroup: new
         type: Bash
         configuration:
           priority: 0
