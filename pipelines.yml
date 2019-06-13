@@ -75,7 +75,7 @@ pipelines:
             - name: FileSpec
             - name: RemoteFile
           integrations:
-            - name: artifactoryIntegration
+            - name: artifactoryIntegration2
             - name: git_chaitanya
         execution:
           onExecute:
