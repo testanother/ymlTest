@@ -49,6 +49,7 @@ pipelines:
       - name: Bash_1
         type: Bash
         configuration:
+          affinityGroup: bldGroup 
           priority: 0
           outputResources:
             - name: DockerTagTest
