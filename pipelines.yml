@@ -63,7 +63,7 @@ pipelines:
       - name: Bash_3
         type: Bash
         configuration:
-          affinityGroup: bldGroup
+          affinityGroup: bldGroup2
           priority: 0
           inputSteps:
             - name: Bash_2
