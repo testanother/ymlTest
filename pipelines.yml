@@ -34,13 +34,6 @@ resources:
       sourceArtifactory: artifactoryIntegration
       buildName: myBuild
       buildNumber: 123
-  - name: DockerTagTest
-    type: Image
-    configuration:
-      registry: artifactoryIntegration
-      imageName: demo/app
-      imageTag: latest
-      autoPull: false
 pipelines:
   - name: img_test_pipeline
     setup:
@@ -62,7 +55,6 @@ pipelines:
           affinityGroup: bldGroup 
           priority: 0
           inputResources:
-            - name: DockerTagTest
             - name: Aql
         execution:
           onExecute:
