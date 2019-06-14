@@ -37,7 +37,7 @@ resources:
   - name: DockerTagTest
     type: Image
     configuration:
-      registry: artDocker
+      registry: artifactoryIntegration
       imageName: demo/app
       imageTag: latest
       autoPull: false
@@ -75,7 +75,7 @@ pipelines:
             - name: FileSpec
             - name: RemoteFile
           integrations:
-            - name: artifactoryIntegration2
+            - name: artifactoryIntegration
             - name: git_chaitanya
         execution:
           onExecute:
