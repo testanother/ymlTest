@@ -7,6 +7,11 @@ resources:
       fileLocation: 'https://github.com/ChaitanyaVootla/ymlTest/edit/master/pipelines.yml'
       fileName: 'pipelines.yml'
       fileDateTime: 'dttm'
+  - name: Webhook
+    type: Webhook
+    configuration:
+      webhookName: webhookIntegration
+      payload: 'asd'
   - name: FileSpec
     type: FileSpec
     configuration:      
@@ -57,6 +62,7 @@ pipelines:
           inputResources:
             - name: BuildInfo
             - name: Aql
+            - name: Webhook
         execution:
           onExecute:
             - echo "done"
