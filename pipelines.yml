@@ -3,7 +3,7 @@ resources:
   - name: Image
     type: Image
     configuration:
-       registry: docker
+       registry: docker_chaitanya
        imageName: imageRepo/imageName
        imageTag: initial
 pipelines:
