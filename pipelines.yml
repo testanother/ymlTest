@@ -39,6 +39,12 @@ resources:
       sourceArtifactory: artifactoryIntegration
       buildName: myBuild
       buildNumber: 123
+  - name: Image
+    type: Image
+    configuration:
+       registry: docker
+       imageName: imageRepo/imageName
+       imageTag: initial
 pipelines:
   - name: img_test_pipeline
     setup:
@@ -50,7 +56,7 @@ pipelines:
           affinityGroup: bldGroup 
           priority: 0
           outputResources:
-            - name: BuildInfo
+            - name: Image
         execution:
           onExecute:
             - write_output DockerTagTest "imageTag="$step_id
@@ -60,65 +66,7 @@ pipelines:
           affinityGroup: bldGroup 
           priority: 0
           inputResources:
-            - name: BuildInfo
-            - name: Aql
-            - name: Webhook
-        execution:
-          onExecute:
-            - echo "done"
-      - name: Bash_3
-        type: Bash
-        configuration:
-          affinityGroup: bldGroup
-          priority: 0
-          inputSteps:
-            - name: Bash_2
-          inputResources:
-            - name: FileSpec
-            - name: RemoteFile
-          integrations:
-            - name: artifactoryIntegration
-            - name: git_chaitanya
-        execution:
-          onExecute:
-            - echo "done"
-      - name: Bash_4
-        type: Bash
-        configuration:
-          affinityGroup: bldGroup
-          priority: 0
-          inputSteps:
-            - name: Bash_3
-        execution:
-          onExecute:
-            - echo "done"
-      - name: Bash_5
-        type: Bash
-        configuration:
-          affinityGroup: bldGroup
-          priority: 0
-          inputSteps:
-            - name: Bash_4
-        execution:
-          onExecute:
-            - echo "done"
-      - name: Bash_6
-        type: Bash
-        configuration:
-          affinityGroup: bldGroup
-          priority: 0
-          inputSteps:
-            - name: Bash_5
-        execution:
-          onExecute:
-            - echo "done"
-      - name: Bash_7
-        type: Bash
-        configuration:
-          affinityGroup: bldGroup
-          priority: 0
-          inputSteps:
-            - name: Bash_6
+            - name: Image
         execution:
           onExecute:
             - echo "done"
