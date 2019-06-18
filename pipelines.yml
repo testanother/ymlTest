@@ -20,7 +20,7 @@ pipelines:
             - name: Image
         execution:
           onExecute:
-            - write_output DockerTagTest "imageTag="$step_id
+            - write_output Image "imageTag="$step_id
       - name: Bash_2
         type: Bash
         configuration:
