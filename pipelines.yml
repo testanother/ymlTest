@@ -1,44 +1,5 @@
     
 resources:
-  - name: RemoteFile
-    type: RemoteFile
-    configuration:
-      source: git_chaitanya
-      fileLocation: 'https://github.com/ChaitanyaVootla/ymlTest/edit/master/pipelines.yml'
-      fileName: 'pipelines.yml'
-      fileDateTime: 'dttm'
-  - name: Webhook
-    type: Webhook
-    configuration:
-      webhookName: webhookIntegration
-      payload: 'asd'
-  - name: FileSpec
-    type: FileSpec
-    configuration:      
-      sourceArtifactory: docker_chaitanya
-      pattern: 'test'
-      aql: 'test'
-      target: 'test'
-      props: 'test'
-      recursive: false
-      flat: false
-      excludePatterns: 'test'
-      archiveEntries: 'test'
-      sortBy: 'test'
-      sortOrder: 'test'
-      limit: 1
-      offset: 1
-  - name: Aql
-    type: Aql
-    configuration:
-      sourceArtifactory: artifactoryIntegration
-      query: 'asd'
-  - name: BuildInfo 
-    type: BuildInfo
-    configuration:
-      sourceArtifactory: artifactoryIntegration
-      buildName: myBuild
-      buildNumber: 123
   - name: Image
     type: Image
     configuration:
@@ -70,34 +31,3 @@ pipelines:
         execution:
           onExecute:
             - echo "done"
-#       - name: bash
-#         type: bash
-#         execution:
-#           onExecute:
-#             - echo "executing..."
-#         triggeredBy:
-#           resources:
-#             - KubeCluster
-#             - RemoteFile
-#             - FileSpec
-#       - name: CreateReleaseBundle
-#         type: CreateReleaseBundle
-#         configuration:
-#           releaseBundleName: 'test'
-#           releaseBundleVersion: 'test'
-#           dryRun: false
-#           sign: false
-#           storeAtSourceArtifactory: 'test'
-#           description: 'test'
-#           releaseNotes:
-#             content: 'test'
-#             syntax: plain_text
-#           inputResources:
-#             - name: KubeCluster
-#             - name: BuildInfo
-#           inputSteps:
-#             - name: bash
-#           integrations:
-#             - name: artifactoryIntegration
-#           outputResources:
-#             - name: RemoteFile
