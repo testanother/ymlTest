@@ -14,7 +14,7 @@ pipelines:
       - name: Bash_1
         type: Bash
         configuration:
-          affinityGroup: bldGroup 
+          affinityGroup: bldGroupTest
           priority: 0
           outputResources:
             - name: Image
@@ -66,7 +66,7 @@ pipelines:
       - name: Bash_6
         type: Bash
         configuration:
-          affinityGroup: bldGroup 
+          affinityGroup: bldGroupTest 
           priority: 0
           inputSteps:
             - name: Bash_2
