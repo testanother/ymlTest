@@ -38,8 +38,6 @@ pipelines:
           priority: 0
           inputSteps:
             - name: Bash_2
-          inputResources:
-            - name: Image
         execution:
           onExecute:
             - echo "done"
@@ -68,6 +66,8 @@ pipelines:
         configuration:
           affinityGroup: bldGroupTest 
           priority: 0
+          inputResources:
+            - name: Image
           inputSteps:
             - name: Bash_2
         execution:
