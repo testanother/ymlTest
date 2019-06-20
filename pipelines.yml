@@ -24,7 +24,6 @@ pipelines:
       - name: Bash_2
         type: Bash
         configuration:
-          affinityGroup: bldGroup 
           priority: 0
           inputResources:
             - name: Image
@@ -34,7 +33,6 @@ pipelines:
       - name: Bash_3
         type: Bash
         configuration:
-          affinityGroup: bldGroup 
           priority: 0
           inputSteps:
             - name: Bash_2
@@ -44,7 +42,6 @@ pipelines:
       - name: Bash_4
         type: Bash
         configuration:
-          affinityGroup: bldGroup 
           priority: 0
           inputSteps:
             - name: Bash_2
@@ -54,7 +51,6 @@ pipelines:
       - name: Bash_5
         type: Bash
         configuration:
-          affinityGroup: bldGroup 
           priority: 0
           inputSteps:
             - name: Bash_2
@@ -75,7 +71,6 @@ pipelines:
       - name: Bash_7
         type: Bash
         configuration:
-          affinityGroup: bldGroup 
           priority: 0
           inputSteps:
             - name: Bash_6
@@ -85,7 +80,6 @@ pipelines:
       - name: Bash_8
         type: Bash
         configuration:
-          affinityGroup: bldGroup 
           priority: 0
           inputSteps:
             - name: Bash_3
