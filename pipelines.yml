@@ -51,6 +51,7 @@ pipelines:
       - name: Bash_5
         type: Bash
         configuration:
+          affinityGroup: bldGroupTest 
           priority: 0
           inputSteps:
             - name: Bash_2
@@ -89,6 +90,7 @@ pipelines:
       - name: Bash_8
         type: Bash
         configuration:
+          affinityGroup: bldGroupTest 
           priority: 0
           inputSteps:
             - name: Bash_3
