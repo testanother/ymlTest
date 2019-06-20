@@ -54,6 +54,12 @@ pipelines:
           priority: 0
           inputSteps:
             - name: Bash_2
+      - name: Bash_11
+        type: Bash
+        configuration:
+          priority: 0
+          inputSteps:
+            - name: Bash_2
         execution:
           onExecute:
             - echo "done"
