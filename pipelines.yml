@@ -86,3 +86,21 @@ pipelines:
         execution:
           onExecute:
             - echo "done"
+      - name: Bash_9
+        type: Bash
+        configuration:
+          priority: 0
+          inputSteps:
+            - name: Bash_3
+        execution:
+          onExecute:
+            - echo "done"
+      - name: Bash_10
+        type: Bash
+        configuration:
+          priority: 0
+          inputSteps:
+            - name: Bash_3
+        execution:
+          onExecute:
+            - echo "done"
