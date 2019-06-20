@@ -54,6 +54,9 @@ pipelines:
           priority: 0
           inputSteps:
             - name: Bash_2
+        execution:
+          onExecute:
+            - echo "done"
       - name: Bash_11
         type: Bash
         configuration:
