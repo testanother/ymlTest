@@ -61,8 +61,8 @@ pipelines:
         type: Bash
         configuration:
           priority: 0
-          inputResources:
-            - name: Image
+          inputSteps:
+            - name: Bash_1
         execution:
           onExecute:
             - echo "done"
