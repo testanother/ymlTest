@@ -27,8 +27,6 @@ pipelines:
           priority: 0
           inputSteps:
             - name: Bash_1
-          inputResources:
-            - name: Image
         execution:
           onExecute:
             - echo "done"
@@ -38,8 +36,6 @@ pipelines:
           priority: 0
           inputSteps:
             - name: Bash_1
-          inputResources:
-            - name: Image
         execution:
           onExecute:
             - echo "done"
@@ -49,8 +45,6 @@ pipelines:
           priority: 0
           inputSteps:
             - name: Bash_1
-          inputResources:
-            - name: Image
         execution:
           onExecute:
             - echo "done"
@@ -60,8 +54,6 @@ pipelines:
           priority: 0
           inputSteps:
             - name: Bash_1
-          inputResources:
-            - name: Image
         execution:
           onExecute:
             - echo "done"
