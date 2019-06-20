@@ -109,7 +109,7 @@ pipelines:
           priority: 0
           inputSteps:
             - name: Bash_2
-          inputResources
+          inputResources:
             - name: Image
         execution:
           onExecute:
