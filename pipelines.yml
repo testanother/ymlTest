@@ -61,7 +61,6 @@ pipelines:
           affinityGroup: bldGroupTest
           priority: 0
           inputSteps:
-            - name: Bash_2
             - name: Bash_1
         execution:
           onExecute:
@@ -71,8 +70,6 @@ pipelines:
         configuration:
           affinityGroup: bldGroupTest 
           priority: 0
-          inputSteps:
-            - name: Bash_2
           inputResources:
             - name: Image
         execution:
