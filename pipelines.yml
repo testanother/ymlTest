@@ -8,8 +8,6 @@ resources:
        imageTag: initial
 pipelines:
   - name: img_test_pipeline
-    setup:
-      runtime: onHost
     steps:
       - name: Bash_1
         type: Bash
