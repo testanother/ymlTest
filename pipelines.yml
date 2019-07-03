@@ -112,3 +112,39 @@ pipelines:
         execution:
           onExecute:
             - echo "done"
+            
+            
+            
+            
+  - name: trigger_test
+    steps:
+      - name: trigger_1
+        type: Bash
+        configuration:
+          affinityGroup: trigger
+          priority: 0
+          outputResources:
+            - name: Image
+        execution:
+          onExecute:
+            - echo "done"
+      - name: trigger_2
+        type: Bash
+        configuration:
+          affinityGroup: trigger
+          priority: 0
+          inputSteps:
+            - name: trigger_1
+            - name: trigger_3
+        execution:
+          onExecute:
+            - echo "done"
+      - name: trigger_3
+        type: Bash
+        configuration:
+          priority: 0
+          inputSteps:
+            - name: trigger_1
+        execution:
+          onExecute:
+            - echo "done"
