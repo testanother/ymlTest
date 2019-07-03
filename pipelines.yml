@@ -123,8 +123,6 @@ pipelines:
         configuration:
           affinityGroup: trigger
           priority: 0
-          outputResources:
-            - name: Image
         execution:
           onExecute:
             - echo "done"
