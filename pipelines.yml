@@ -106,6 +106,7 @@ pipelines:
       - name: Bash_10
         type: Bash
         configuration:
+          affinityGroup: bldGroupTest
           priority: 0
           inputSteps:
             - name: Bash_3
