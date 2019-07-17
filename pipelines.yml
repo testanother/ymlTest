@@ -135,7 +135,7 @@ pipelines:
 
   - name: state_test
     steps:
-     - name: testReport_u18
+      - name: testReport_u18
         type: Bash
         configuration:
           inputResources:
