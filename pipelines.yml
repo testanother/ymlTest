@@ -133,7 +133,9 @@ pipelines:
             - echo "done"
     
 
-  - name: testReport_u18
+  - name: state_test
+    steps:
+     - name: testReport_u18
         type: Bash
         configuration:
           inputResources:
