@@ -6,6 +6,11 @@ resources:
        registry: docker_chaitanya
        imageName: imageRepo/imageName
        imageTag: initial
+  - name: gitResource
+    type: GitRepo
+    configuration:
+      gitProvider: git_chaitanya
+      path: ChaitanyaVootla/ymlTest
 pipelines:
   - name: img_test_pipeline
     steps:
@@ -126,8 +131,27 @@ pipelines:
         execution:
           onExecute:
             - echo "done"
+    
 
-
+  - name: testReport_u18
+        type: Bash
+        configuration:
+          inputResources:
+            - name: gitResource
+        execution:
+          onExecute:
+            - printenv
+            - add_run_files pipelines.yml test_file # "test_calc.py" any of your file name in gitRepo resource
+      
+      - name: run_file_restore
+        type: Bash
+        configuration:
+          inputSteps:
+            - name: testReport_u18
+        execution:
+          onExecute:
+            - printenv
+            - restore_run_files test_file pipelines.yml
 
 
 
