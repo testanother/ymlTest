@@ -143,7 +143,8 @@ pipelines:
         execution:
           onExecute:
             - printenv
-            - add_run_files pipelines.yml test_file # "test_calc.py" any of your file name in gitRepo resource
+            - cd $res_gitResource_resourcePath
+            - add_run_files pipelines.yml test_file
       
       - name: run_file_restore
         type: Bash
