@@ -130,6 +130,7 @@ pipelines:
           priority: 0
         execution:
           onExecute:
+            - sleep 60
             - echo "done"
     
 
