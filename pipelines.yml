@@ -148,7 +148,7 @@ pipelines:
             - add_run_files pipelines.yml test_file
       
       - name: run_file_restore
-        t ype: Bash
+        type: Bash
         configuration:
           inputSteps:
             - name: testReport_u18
