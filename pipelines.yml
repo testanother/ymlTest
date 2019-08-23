@@ -1,16 +1,16 @@
     
-resources:
-  - name: Image
-    type: Image
-    configuration:
-       registry: docker_chaitanya
-       imageName: imageRepo/imageName
-       imageTag: initial
-  - name: gitResource
-    type: GitRepo
-    configuration:
-      gitProvider: git_chaitanya
-      path: ChaitanyaVootla/ymlTest
+# resources:
+#   - name: Image
+#     type: Image
+#     configuration:
+#        registry: docker_chaitanya
+#        imageName: imageRepo/imageName
+#        imageTag: initial
+#   - name: gitResource
+#     type: GitRepo
+#     configuration:
+#       gitProvider: git_chaitanya
+#       path: ChaitanyaVootla/ymlTest
 pipelines:
 #   - name: img_test_pipeline
 #     steps:
@@ -139,13 +139,11 @@ pipelines:
       - name: testReport_u18
         type: Bash
         configuration:
-          inputResources:
-            - name: gitResource
+#           inputResources:
+#             - name: gitResource
         execution:
           onExecute:
             - printenv
-            - cd $res_gitResource_resourcePath
-            - add_run_files pipelines.yml test_file
       
       - name: run_file_restore
         type: Bash
@@ -155,7 +153,6 @@ pipelines:
         execution:
           onExecute:
             - printenv
-            - restore_run_files test_file pipelines.yml
 
 
 
