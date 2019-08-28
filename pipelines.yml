@@ -143,12 +143,8 @@ pipelines:
 #             - name: gitResource
         execution:
           onExecute:
-            - c=1
-              while [[ $c -le 100 ]]
-              do 
-                 echo "$c"
-                 let c=c+1
-              done
+            - sudo chmod +x ./echoTest.sh
+            - ./echoTest.sh
       
       - name: run_file_restore
         type: Bash
