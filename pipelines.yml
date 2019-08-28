@@ -14,6 +14,7 @@ pipelines:
             - name: gitResource
         execution:
           onExecute:
+            - pushd $res_gitResource_resourcePath
             - sudo chmod +x echoTest.sh
             - ./echoTest.sh
       
