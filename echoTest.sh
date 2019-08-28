@@ -1,8 +1,8 @@
 #!/bin/bash
 c=1
-while [[ $c -le 20 ]]
+while [[ $c -le 30 ]]
 do 
   # your-unix-command-here
-   echo "$c"
+   echo "Echoing $c"
    let c=c+1
 done
