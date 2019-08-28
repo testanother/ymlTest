@@ -16,6 +16,7 @@ pipelines:
         type: Bash
         execution:
           onExecute:
+            - sleep 120
             - sudo chmod +x ./echoTest.sh
             - ./echoTest.sh
       
