@@ -9,6 +9,9 @@ pipelines:
     steps:
       - name: testReport_u18
         type: Bash
+        configuration:
+          inputResources:
+            - name: gitResource
         execution:
           onExecute:
             - sleep 120
