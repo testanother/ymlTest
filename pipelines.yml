@@ -143,7 +143,12 @@ pipelines:
 #             - name: gitResource
         execution:
           onExecute:
-            - printenv
+            - c=1
+              while [[ $c -le 100 ]]
+              do 
+                 echo "$c"
+                 let c=c+1
+              done
       
       - name: run_file_restore
         type: Bash
