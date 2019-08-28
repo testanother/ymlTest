@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/bin/bash
 c=1
 while [[ $c -le 3000 ]]
 do 
