@@ -14,8 +14,7 @@ pipelines:
             - name: gitResource
         execution:
           onExecute:
-            - sleep 120
-            - sudo chmod +x ./echoTest.sh
+            - sudo chmod +x echoTest.sh
             - ./echoTest.sh
       
       - name: run_file_restore
