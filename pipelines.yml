@@ -1,15 +1,9 @@
+resources:
+  - name: gitResource
+    type: GitRepo
+    configuration:
+      gitProvider: git_chaitanya
 pipelines: 
-  - name: trigger_test
-    steps:
-      - name: trigger_1
-        type: Bash
-        configuration:
-          affinityGroup: trigger
-          priority: 0
-        execution:
-          onExecute:
-            - sleep 60
-            - echo "done"
   - name: state_test
     steps:
       - name: testReport_u18
@@ -25,6 +19,19 @@ pipelines:
         configuration:
           inputSteps:
             - name: testReport_u18
+          inputResources:
+            - name: gitResource
         execution:
           onExecute:
             - printenv
+  - name: trigger_test
+    steps:
+      - name: trigger_1
+        type: Bash
+        configuration:
+          affinityGroup: trigger
+          priority: 0
+        execution:
+          onExecute:
+            - sleep 60
+            - echo "done"
