@@ -194,8 +194,6 @@ pipelines:
         configuration:
           inputSteps:
             - name: testReport_u18
-          inputResources:
-            - name: gitResource
         execution:
           onExecute:
             - printenv
