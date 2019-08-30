@@ -26,14 +26,6 @@ pipelines:
         execution:
           onExecute:
             - printenv
-      - name: run_file_restore2
-        type: Bash
-        configuration:
-          inputSteps:
-            - name: testReport_u18
-        execution:
-          onExecute:
-            - printenv
   - name: trigger_test
     steps:
       - name: trigger_1
