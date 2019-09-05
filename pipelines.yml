@@ -40,6 +40,7 @@ pipelines:
       - name: trigger_2
         type: Bash
         configuration:
+          inputResources:
             - name: trigger_1
         execution:
           onExecute:
@@ -48,6 +49,7 @@ pipelines:
       - name: trigger_3
         type: Bash
         configuration:
+          inputResources:
             - name: trigger_2
         execution:
           onExecute:
@@ -56,6 +58,7 @@ pipelines:
       - name: trigger_4
         type: Bash
         configuration:
+          inputResources:
             - name: trigger_3
         execution:
           onExecute:
@@ -64,6 +67,7 @@ pipelines:
       - name: trigger_5
         type: Bash
         configuration:
+          inputResources:
             - name: trigger_1
         execution:
           onExecute:
@@ -72,6 +76,7 @@ pipelines:
       - name: trigger_6
         type: Bash
         configuration:
+          inputResources:
             - name: trigger_4
         execution:
           onExecute:
@@ -80,6 +85,7 @@ pipelines:
       - name: trigger_7
         type: Bash
         configuration:
+          inputResources:
             - name: trigger_5
         execution:
           onExecute:
@@ -88,6 +94,7 @@ pipelines:
       - name: trigger_8
         type: Bash
         configuration:
+          inputResources:
             - name: trigger_1
         execution:
           onExecute:
@@ -96,6 +103,7 @@ pipelines:
       - name: trigger_9
         type: Bash
         configuration:
+          inputResources:
             - name: trigger_1
         execution:
           onExecute:
@@ -104,6 +112,7 @@ pipelines:
       - name: trigger_10
         type: Bash
         configuration:
+          inputResources:
             - name: trigger_1
         execution:
           onExecute:
@@ -112,6 +121,7 @@ pipelines:
       - name: trigger_11
         type: Bash
         configuration:
+          inputResources:
             - name: trigger_7
         execution:
           onExecute:
@@ -120,6 +130,7 @@ pipelines:
       - name: trigger_12
         type: Bash
         configuration:
+          inputResources:
             - name: trigger_9
         execution:
           onExecute:
