@@ -136,3 +136,12 @@ pipelines:
           onExecute:
             - sleep 60
             - echo "done"
+      - name: trigger_13
+        type: Bash
+        configuration:
+          inputSteps:
+            - name: trigger_4
+        execution:
+          onExecute:
+            - sleep 60
+            - echo "done"
