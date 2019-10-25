@@ -2,7 +2,7 @@ resources:
   - name: gitResource
     type: GitRepo
     configuration:
-      gitProvider: git_chaitanya
+      gitProvider: gitResource
       path: ChaitanyaVootla/ymlTest
 pipelines: 
   - name: state_test
