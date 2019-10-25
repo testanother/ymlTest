@@ -141,6 +141,7 @@ pipelines:
         configuration:
           inputSteps:
             - name: publish_chart_helm_test_test
+            - name: trigger_11
         execution:
           onExecute:
             - sleep 60
