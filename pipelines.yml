@@ -140,7 +140,7 @@ pipelines:
         type: Bash
         configuration:
           inputSteps:
-            - name: trigger_4
+            - name: publish_chart_helm
         execution:
           onExecute:
             - sleep 60
