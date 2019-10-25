@@ -136,7 +136,7 @@ pipelines:
           onExecute:
             - sleep 60
             - echo "done"
-      - name: test_test_test_test_test_test_test_test_test_test_
+      - name: test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_test_
         type: Bash
         configuration:
           inputSteps:
