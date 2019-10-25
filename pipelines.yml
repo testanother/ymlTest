@@ -55,7 +55,7 @@ pipelines:
           onExecute:
             - sleep 60
             - echo "done"
-      - name: publish_chart_helm
+      - name: publish_chart_helm_test_test
         type: Bash
         configuration:
           inputSteps:
@@ -77,7 +77,7 @@ pipelines:
         type: Bash
         configuration:
           inputSteps:
-            - name: publish_chart_helm
+            - name: publish_chart_helm_test_test
         execution:
           onExecute:
             - sleep 60
@@ -140,7 +140,7 @@ pipelines:
         type: Bash
         configuration:
           inputSteps:
-            - name: publish_chart_helm
+            - name: publish_chart_helm_test_test
         execution:
           onExecute:
             - sleep 60
