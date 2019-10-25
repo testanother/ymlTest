@@ -136,7 +136,7 @@ pipelines:
           onExecute:
             - sleep 60
             - echo "done"
-      - name: trigger_13
+      - name: test test test test test test test test 
         type: Bash
         configuration:
           inputSteps:
