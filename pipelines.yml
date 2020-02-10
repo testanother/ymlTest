@@ -5,6 +5,96 @@ resources:
       gitProvider: gitResource
       path: ChaitanyaVootla/ymlTest
 pipelines: 
+  - name: columnBug
+    steps:
+      - name: step1
+        type: Bash
+        configuration:
+          inputResources:
+            - name: gitResource
+        execution:
+          onExecute:
+            - echo 'done'
+      - name: step2
+        type: Bash
+        configuration:
+          inputResources:
+            - name: gitResource
+          inputSteps:
+            - name: step1
+        execution:
+          onExecute:
+            - echo 'done'
+      - name: step3
+        type: Bash
+        configuration:
+          inputResources:
+            - name: gitResource
+          inputSteps:
+            - name: step2
+        execution:
+          onExecute:
+            - echo 'done'
+      - name: step4
+        type: Bash
+        configuration:
+          inputResources:
+            - name: gitResource
+          inputSteps:
+            - name: step3
+        execution:
+          onExecute:
+            - echo 'done'
+      - name: step5
+        type: Bash
+        configuration:
+          inputResources:
+            - name: gitResource
+          inputSteps:
+            - name: step4
+        execution:
+          onExecute:
+            - echo 'done'
+      - name: step6
+        type: Bash
+        configuration:
+          inputResources:
+            - name: gitResource
+          inputSteps:
+            - name: step5
+        execution:
+          onExecute:
+            - echo 'done'
+      - name: step7
+        type: Bash
+        configuration:
+          inputResources:
+            - name: gitResource
+          inputSteps:
+            - name: step6
+        execution:
+          onExecute:
+            - echo 'done'
+      - name: step8
+        type: Bash
+        configuration:
+          inputResources:
+            - name: gitResource
+          inputSteps:
+            - name: step7
+        execution:
+          onExecute:
+            - echo 'done'
+      - name: distribution
+        type: Bash
+        configuration:
+          inputResources:
+            - name: gitResource
+          inputSteps:
+            - name: step3
+        execution:
+          onExecute:
+            - echo 'done'
   - name: state_test
     steps:
       - name: testReport_u18
