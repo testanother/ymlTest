@@ -92,6 +92,17 @@ pipelines:
             - name: gitResource
           inputSteps:
             - name: step3
+            - name: jfrog_xray_java_client
+        execution:
+          onExecute:
+            - echo 'done'
+      - name: jfrog_xray_java_client
+        type: Bash
+        configuration:
+          inputResources:
+            - name: gitResource
+          inputSteps:
+            - name: step1
         execution:
           onExecute:
             - echo 'done'
