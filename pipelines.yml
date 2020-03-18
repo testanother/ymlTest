@@ -10,7 +10,6 @@ pipelines:
       - name: testReport_u18
         type: Bash
         configuration:
-          nodePool: u16
           inputResources:
             - name: gitResource
         execution:
